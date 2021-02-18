@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Image resizing</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Resize your image to A4!</h1>
+        <%= typeof msg != 'undefined' ? msg : '' %>
+        <form action="/resize" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Select the image that you want to resize</label>
+                <input class="form-control" name="myImage" type="file" id="formFile">
+            </div>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
